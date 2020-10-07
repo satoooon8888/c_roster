@@ -27,15 +27,24 @@ int main(void) {
     // 構造体の初期化
     Person person = {"田中", 100};
     print_person(person);
+    // 出力結果:
+    // 田中 100
+
     // 構造体の配列の定義
     Person people[100];
+
     // 初期化後に文字列を代入するにはstrncpyを使う
     // strncpy(代入先, 文字列, 文字数);
     strncpy(people[0].name, "山田", 100);
     people[0].money = 500;
+
     strncpy(people[1].name, "和田", 100);
     people[1].money = 1000;
+    
     print_person_list(people, 2);
+    // 出力結果:
+    // 山田 500
+    // 和田 1000
     return 0;
 }
 ```
