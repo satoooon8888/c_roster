@@ -1,4 +1,3 @@
-
 # Created by https://www.toptal.com/developers/gitignore/api/git,emacs,linux
 # Edit at https://www.toptal.com/developers/gitignore?templates=git,emacs,linux
 
@@ -83,3 +82,5 @@ flycheck_*.el
 .nfs*
 
 # End of https://www.toptal.com/developers/gitignore/api/git,emacs,linux
+
+*.o
