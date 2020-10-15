@@ -22,47 +22,18 @@ Gitを共有するためのサービス。
 
 など多彩な機能がある。
 
+# 今回は
+
+- レビューできる能力がある人が誰もいない
+- 手間がかかり時間内に終わらなさそう
+- ~~面倒くさい~~
+
+という理由でレビューは行わないことになりました。
+
 # 流れ
 
-1. pullしてGitHubと同期する
-2. (新しく機能を追加したいならブランチを作成する)
-3. 目的のブランチに移動する
-4. コードを書く
-5. キリが良いときにcommitする
-6. 完成したらpush
-7. GitHubに戻ってPull Requestを出す
-8. 皆で確認する
-9. 大丈夫ならmerge
-
-# コマンド
-
-```shell
-# 機能を新しく作成したいときはブランチを作る 名前はadd-new-funcのように目的を書く
-git branch (ブランチの名前)
-# ブランチを移動する (デフォルトのブランチはmasterと呼ばれる)
-git checkout (ブランチの名前)
-```
-
-```shell
-# GitHubに自分のPCの状態を同期させる
-git push origin master
-# GitHubの状態を自分のPCに同期させる 作業中ならcommitを終わらせてから行うこと
-git pull origin master
-```
-
-```shell
-# Gitに新しく作ったファイルを認識させる
-git add .
-# Gitに現在の状態を保存する
-git commit -m "○○を実装した/○○を変更した など何をしたかを書く"
-```
-
-# GitHub上の操作
-
-https://qiita.com/isso0424/items/6fc09a68bf0011dfc922
-
-# 備考
-
-- 自分の管轄でないファイルを変更する必要があるならなるべく変更箇所が少なくなるようにしましょう。
-- commitはこまめにしてくれると嬉しいです。
-
+1. `git pull`でGitHubと同期する
+2. コードを書く
+3. キリがいいところで`git add .` `git commit -m "書いたことの説明"`をする
+4. `git pull`でGitHubと同期する
+5. 完成したら`git push origin master`
