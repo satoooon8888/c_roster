@@ -1,6 +1,6 @@
 # ドキュメント
 
-- [コンパイルの仕方](docs/how_to_compile.md)
+- [コンパイル/テストの仕方](docs/how_to_compile.md)
 - [Git/GitHubの使い方](docs/how_to_use_git.md)
 
 - [構造体の使い方](docs/how_to_use_struct.md)

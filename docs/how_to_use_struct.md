@@ -16,8 +16,9 @@ void print_person(Person person) {
     printf("%s %d\n", person.name, person.money);
 }
 
-// 構造体の配列を引数に持つ配列 *を付ける
-void print_person_list(Person* person_list, int length) {
+// 構造体の配列を引数に持つ配列
+// 配列の要素を変更すると元の配列も変更されるので注意
+void print_person_list(Person person_list[], int length) {
     for (int i = 0; i < length; i++) {
         print_person(person_list[i]);
     }

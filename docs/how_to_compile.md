@@ -30,6 +30,11 @@ void print_number(int number);
 
 # コンパイル
 
+```bash
+make roster
 ```
-gcc (ソースコード1) (ソースコード2) ... -o (実行ファイルの名前)
-```
+
+`main.c`も含めて全部まとめる最終的なコンパイル方法。
+
+# テスト
+
