@@ -38,3 +38,16 @@ make roster
 
 # テスト
 
+- メリット
+
+  関数が正しく動いているか自動で確認できる。機械なのでミスがない。
+
+  共同開発をする上でコードの品質を保証するもの。
+
+- 方法
+
+  makeというツールを使って自動化している。
+
+  `make test_main` `make test_print` `make test_sort` `make test_search`
+
+  のうち自分が担当している名前のコマンドを実行する。
