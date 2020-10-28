@@ -2,14 +2,6 @@
 #include <string.h>
 #include "../src/roster.h"
 
-void init_roster(Student roster[100]) {
-	for (int i = 0; i < 100; i++) {
-		roster[i].number = 0;
-		roster[i].name[0] = '\0';
-		roster[i].school[0] = '\0';	    
-	}	
-}
-
 int main(void) {
 	Student roster[100];
 
