@@ -1,11 +1,17 @@
 #include <stdio.h>
 #include "roster.h"
 
+void init_roster(Student roster[100]) {
+	for (int i = 0; i < 100; i++) {
+		roster[i].number = 0;
+		roster[i].name[0] = '\0';
+		roster[i].school[0] = '\0';	    
+	}	
+}
+
 void load_roster_csv(const char* filename, Student roster[]) {
 	FILE *fp;
-	int input_number;
-	char input_name[128];
-	char input_school[128];
+	init_roster(roster);
 	fp = fopen(filename, "r");
 	if( fp == NULL ){
 		printf( "%s が開けません\n", filename);
