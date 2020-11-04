@@ -4,6 +4,7 @@ typedef struct {
 	char school[128];
 } Student;
 
+void init_roster(Student roster[]);
 void load_roster_csv(const char* filename, Student roster[]);
 void print_roster_list(Student roster[]);
 void sort_roster_by_name(Student roster[]);
