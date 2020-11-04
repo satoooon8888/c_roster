@@ -12,7 +12,7 @@ test_print:
 	rm ./test_print.o
 
 test_sort:
-	gcc test/test_sort.c src/csv.c src/sort_roster.c -o test_sort.o
+	gcc test/test_sort.c src/csv.c src/sort_roster.c src/roster_list.c -o test_sort.o
 	./test_sort.o
 	rm ./test_sort.o
 
