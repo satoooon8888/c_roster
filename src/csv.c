@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdbool.h>
 #include "roster.h"
 
 void init_roster(Student roster[100]) {
@@ -9,16 +10,17 @@ void init_roster(Student roster[100]) {
 	}	
 }
 
-void load_roster_csv(const char* filename, Student roster[]) {
+bool load_roster_csv(const char* filename, Student roster[]) {
 	FILE *fp;
 	init_roster(roster);
 	fp = fopen(filename, "r");
 	if( fp == NULL ){
 		printf( "%s が開けません\n", filename);
-		return;
+		return 1;
 	}
 	int i = 0;
 	while (fscanf(fp, "%d,%127[^,],%127[^\n]%*c", &roster[i].number, roster[i].name, roster[i].school) != EOF) {
 		i++;
 	};
+	return 0;
 }
