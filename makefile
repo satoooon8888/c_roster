@@ -1,5 +1,5 @@
 roster:
-	gcc src/main.c src/csv.c src/roster_list.c src/sort_roster.c src/search_roster_JHS.c src/name_number.c -o roster.o
+	gcc src/main.c src/csv.c src/add.c src/roster_list.c src/sort_roster.c src/search_roster_JHS.c src/name_number.c -o roster.o
 
 test_csv:
 	gcc test/test_csv.c src/csv.c -o test_csv.o

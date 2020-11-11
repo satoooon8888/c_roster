@@ -13,6 +13,7 @@ void menu(Student roster[]) {
 	char input_school[128];
 	char input_name[128];
    	int input_number = 0;
+	Student input_student;
 	while (1) {
 		printf(
 			   "\n"
@@ -22,7 +23,8 @@ void menu(Student roster[]) {
 			   "4. 出席番号で検索\n"
 			   "5. 氏名で検索\n"
 			   "6. 中学で検索\n"
-			   "7. 終了\n"
+			   "7. 生徒を入力\n"
+			   "8. 終了\n"
 			   "Input: "
 			   );
 		scanf("%d%*c", &choice);
@@ -52,6 +54,15 @@ void menu(Student roster[]) {
 			search_roster_JHS(roster, input_school);
 			break;
 		case 7:
+			printf("出席番号: ");
+			scanf("%d%*c", &input_student.number);
+			printf("氏名: ");
+			scanf("%127s%*c", input_student.name);
+			printf("学校名: ");
+			scanf("%127s%*c", input_student.school);
+			add_student(roster, input_student);
+			break;
+		case 8:
 			return;
 		}
 	}
@@ -69,5 +80,6 @@ int main(int argc, char* argv[]) {
 		return 1;
 	}
 	menu(roster);
+	save_roster_csv(argv[1], roster);
 	return 0;
 }

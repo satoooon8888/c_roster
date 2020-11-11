@@ -24,3 +24,17 @@ bool load_roster_csv(const char* filename, Student roster[]) {
 	};
 	return 0;
 }
+
+bool save_roster_csv(const char* filename, Student roster[]) {
+	FILE *fp;
+	fp = fopen(filename, "w");
+	if (fp == NULL) {
+		printf("%s が開けません\n", filename);
+	}
+	for (int i = 0; i < 100; i++) {
+		if (roster[i].name[0] == '\0') {
+			break;
+		}
+		fprintf(fp, "%d,%s,%s\n", roster[i].number, roster[i].name, roster[i].school);
+	}
+}
