@@ -9,14 +9,20 @@ int numcmp(Student *x, Student *y)
 }
 void sort_roster_by_number(Student roster[])
 {
+    int length = 100;
     Student tmp_roster[100];
     for (int i = 0; i < 100; i++)
     {
+        if (roster[i].name[0] == '\0')
+        {
+            length = i;
+            break;
+        }
         tmp_roster[i].number = roster[i].number;
         strncpy(tmp_roster[i].name, roster[i].name, 128);
         strncpy(tmp_roster[i].school, roster[i].school, 128);
     }
-    qsort(tmp_roster, 100, sizeof(Student), numcmp);
+    qsort(tmp_roster, length, sizeof(Student), numcmp);
     print_roster_list(tmp_roster);
 }
 
@@ -26,13 +32,19 @@ int namecmp(Student *x, Student *y)
 }
 void sort_roster_by_name(Student roster[])
 {
+    int length = 100;
     Student tmp_roster[100];
     for (int i = 0; i < 100; i++)
     {
+        if (roster[i].name[0] == '\0')
+        {
+            length = i;
+            break;
+        }
         tmp_roster[i].number = roster[i].number;
         strncpy(tmp_roster[i].name, roster[i].name, 128);
         strncpy(tmp_roster[i].school, roster[i].school, 128);
     }
-    qsort(tmp_roster, 100, sizeof(Student), namecmp);
+    qsort(tmp_roster, length, sizeof(Student), namecmp);
     print_roster_list(tmp_roster);
 }
