@@ -8,11 +8,10 @@ void print_student(Student student){
 
 void print_roster_list(Student student_list[]){
     int i = 0;
-    while(1){
-        print_student(student_list[i]);
-        i++;
+    for(i = 0;i < 100; i++){
         if(student_list[i].name[0] == '\0'){
             break;
         }
+        print_student(student_list[i]);
     }
 }
