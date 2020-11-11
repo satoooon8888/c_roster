@@ -5,7 +5,7 @@
 
 int numcmp(Student *x, Student *y)
 {
-    return (x->number < y->number ? -1 : x->number < y->number ? 1 : 0);
+    return (x->number < y->number ? -1 : x->number > y->number ? 1 : 0);
 }
 void sort_roster_by_number(Student roster[])
 {
