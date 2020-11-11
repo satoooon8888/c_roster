@@ -10,7 +10,7 @@ int main(void) {
 	load_roster_csv("./test/resource/test.csv", roster);
 	printf("[*] by name\n");
 	sort_roster_by_name(roster);
-	printf("[*] by search\n");
+	printf("[*] by number\n");
 	sort_roster_by_number(roster);
 	
 	init_roster(roster);
@@ -18,7 +18,7 @@ int main(void) {
 	load_roster_csv("./test/resource/empty.csv", roster);
 	printf("[*] by name\n");
 	sort_roster_by_name(roster);
-	printf("[*] by search\n");
+	printf("[*] by number\n");
 	sort_roster_by_number(roster);
 
 	init_roster(roster);
@@ -26,7 +26,7 @@ int main(void) {
 	load_roster_csv("./test/resource/100.csv", roster);
 	printf("[*] by name\n");
 	sort_roster_by_name(roster);
-	printf("[*] by search\n");
+	printf("[*] by number\n");
 	sort_roster_by_number(roster);
 	
 	return 0;

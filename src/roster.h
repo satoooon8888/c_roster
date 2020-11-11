@@ -1,3 +1,4 @@
+#include <stdbool.h>
 typedef struct {
 	int number;
 	char name[128];
@@ -5,7 +6,7 @@ typedef struct {
 } Student;
 
 void init_roster(Student roster[]);
-void load_roster_csv(const char* filename, Student roster[]);
+bool load_roster_csv(const char* filename, Student roster[]);
 void print_roster_list(Student roster[]);
 void sort_roster_by_name(Student roster[]);
 void sort_roster_by_number(Student roster[]);

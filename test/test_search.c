@@ -30,8 +30,8 @@ int main(void) {
 	load_roster_csv("./test/resource/100.csv", roster);
 	printf("[*] JHS: 第100中学\n");
 	search_roster_JHS(roster, "第100中学");
-	printf("[*] name: 第100中学\n");
-	search_roster_name(roster, "第100中学");
+	printf("[*] name: 100郎丸　太郎\n");
+	search_roster_name(roster, "100郎丸　太郎");
 	printf("[*] number: 100\n");
 	search_roster_number(roster, 100);
 	
