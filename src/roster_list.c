@@ -8,7 +8,7 @@ void print_student(Student student){
 
 void print_roster_list(Student student_list[]){
     int i = 0;
-    for(i = 0;i < 100; i++){
+    for(i = 0;i <= 100; i++){
         if(student_list[i].name[0] == '\0'){
             break;
         }
